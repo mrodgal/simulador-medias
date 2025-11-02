@@ -1,5 +1,14 @@
+function toggleNormalParams() {
+  const type = document.getElementById("populationType").value;
+  const normalParams = document.getElementById("normalParams");
+  normalParams.style.display = type === "normal" ? "block" : "none";
+}
+
 function generatePopulation(type, size = 10000) {
   const data = [];
+  const mean = parseFloat(document.getElementById("normalMean").value);
+  const std = parseFloat(document.getElementById("normalStd").value);
+
   for (let i = 0; i < size; i++) {
     if (type === "uniform") {
       data.push(Math.random() * 10);
@@ -8,8 +17,12 @@ function generatePopulation(type, size = 10000) {
       while (u === 0) u = Math.random();
       while (v === 0) v = Math.random();
       let num = Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-      data.push(num * 2 + 5);
-    } else if (type === "random") {
+      data.push(num * std + mean);
+    } else if (type === "skewed") {
+      const lambda = 0.5;
+      const exp = -Math.log(1 - Math.random()) / lambda;
+      data.push(exp);
+    } else if (type === "discrete") {
       data.push(Math.floor(Math.random() * 11));
     }
   }
