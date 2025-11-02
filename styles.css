@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select, button {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1em;
+}
+
+canvas {
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
