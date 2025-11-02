@@ -30,4 +30,19 @@
       <label for="sampleSize">Tamaño de muestra:</label>
       <input type="number" id="sampleSize" value="30" min="1" max="100" />
 
-      <label for="numSamples">
+      <label for="numSamples">Número de muestras:</label>
+      <input type="number" id="numSamples" value="1000" min="10" max="10000" />
+
+      <button type="button" onclick="simulate()">Simular</button>
+    </section>
+
+    <section id="stats" class="stats"></section>
+
+    <section class="chart-container">
+      <canvas id="chart"></canvas>
+    </section>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
