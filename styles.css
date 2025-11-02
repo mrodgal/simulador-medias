@@ -5,30 +5,49 @@ body {
   color: #333;
 }
 
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
 h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-label {
+.controls label,
+.controls input,
+.controls select,
+.controls button {
   display: block;
-  margin-top: 10px;
-}
-
-input, select, button {
-  margin-bottom: 10px;
-  padding: 5px;
+  margin: 10px 0;
   font-size: 1em;
 }
 
-canvas {
-  margin-top: 20px;
+.controls {
   background-color: #fff;
+  padding: 15px;
   border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-#stats {
+.stats {
   margin-top: 20px;
   padding: 10px;
   background-color: #eef;
   border: 1px solid #99c;
+  border-radius: 6px;
+}
+
+.chart-container {
+  margin-top: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
 }
