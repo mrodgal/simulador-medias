@@ -25,3 +25,10 @@ canvas {
   background-color: #fff;
   border: 1px solid #ccc;
 }
+
+#stats {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #eef;
+  border: 1px solid #99c;
+}
